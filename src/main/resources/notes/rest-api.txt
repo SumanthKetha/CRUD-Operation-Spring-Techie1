@@ -1,0 +1,11 @@
+Objective:
+1.Create a Spring Boot project using spring initializer.
+2.Add the required dependencies.
+3.create a rest api to create employee ,get employee,update employee. delete employee(Basically crud operation)
+4.create the model package and create employee model class.
+5.create repository class.
+6.create service class.
+7.create controller class.
+8.In application properties file we need to add the mysql host and username and password.
+9.Add Hibernate configurations.
+
