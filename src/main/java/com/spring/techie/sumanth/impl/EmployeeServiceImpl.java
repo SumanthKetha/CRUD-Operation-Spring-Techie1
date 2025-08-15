@@ -35,4 +35,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         return "Employee Object deleted Successfully with Id : " + id;
     }
 
+    @Override
+    public String deleteEmployee(Employee employee) {
+        employeeRepository.delete(employee);
+        return "Employee deleted successfully " ;
+    }
+
 }

@@ -30,4 +30,7 @@ public class EmployeeController {
     public String removeEmployee(@PathVariable Integer id) {
         return employeeService.deleteEmployeeById(id);
     }
+
+    @PostMapping("/delete/employee")
+    public String deleteEmployee(@RequestBody Employee employee){return employeeService.deleteEmployee(employee);}
 }
