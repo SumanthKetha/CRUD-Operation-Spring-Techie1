@@ -1,5 +1,6 @@
 package com.spring.techie.sumanth.controllers;
 
+import com.spring.techie.sumanth.impl.EmployeeServiceImpl;
 import com.spring.techie.sumanth.model.Employee;
 import com.spring.techie.sumanth.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +9,12 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class EmployeeController {
 
+    private final EmployeeService employeeService;
+
     @Autowired
-    private EmployeeService employeeService;
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
     @PostMapping("/save")
     public Employee createEmployee(@RequestBody Employee employee) {
