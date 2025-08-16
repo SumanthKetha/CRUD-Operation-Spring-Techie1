@@ -1,0 +1,51 @@
+Before SpringBoot developers are used to build application using Spring Framework.
+Before SpringBoot we have a lot of Boilerplate code.
+What is Bean in Spring Boot?
+Ans: It is same as java Object , but which is managed(creation , initialization,deletion) by springFramework.
+The classes under the base package of project, the SpringBoot will scan the classes and creates the objects and we must and should
+annotate @Service or @Component , @RestController, @Repository.
+
+SpringBoot has an embedded tomcat server.It comes we add the web dependency.
+
+starter dependencies:  PreDefined dependency bundles to reduce manual dependency management.
+
+Production Ready Features(Actuator): It provides a set of api's to get info of application.
+
+Externalized Configuration: Allows configuration via .properties or yaml files.
+
+Auto-Configuration: SpringBoot comes with Auto Configuration, configures the spring application based on
+                    dependencies that we have in classpath.
+
+@SpringBootApplication:  This marks the class is main entry point for starting.
+
+It is equal to 3 annotations:
+1.@EnableAutoConfiguration : Tells Spring Boot to autoconfigure the application based on dependencies on the classpath.
+2.@ComponentScan : Tells spring to scan the package of annotated class (and sub-packages) for components like:
+                    @Controller
+                    @Service
+                    @Component
+                    @Repository
+                    @RestController
+3.@Configuration : Marks the class as a source of bean.
+
+If we want to exclude the any class from auto-configuration then use the exclude attribute.
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+
+if you want to auto configure the classes outside the base package then use this and mention the package names.
+@ComponentScan(basePackages = {"dummy","com.spring.techie.sumanth"})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

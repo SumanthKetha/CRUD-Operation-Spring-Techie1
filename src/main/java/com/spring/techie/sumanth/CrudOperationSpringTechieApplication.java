@@ -2,19 +2,19 @@ package com.spring.techie.sumanth;
 
 import com.spring.techie.sumanth.controllers.EmployeeController;
 import com.spring.techie.sumanth.impl.EmployeeServiceImpl;
-import com.spring.techie.sumanth.model.Employee;
+
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.core.env.ConfigurableEnvironment;
 
 @SpringBootApplication
 public class CrudOperationSpringTechieApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext run = SpringApplication.run(CrudOperationSpringTechieApplication.class, args);
+
 		EmployeeController bean = run.getBean(EmployeeController.class);
 		System.out.println(bean.hashCode());
 		EmployeeController bean1 = (EmployeeController)run.getBean("employeeController");

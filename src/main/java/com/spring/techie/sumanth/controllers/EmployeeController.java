@@ -1,6 +1,5 @@
 package com.spring.techie.sumanth.controllers;
 
-import com.spring.techie.sumanth.impl.EmployeeServiceImpl;
 import com.spring.techie.sumanth.model.Employee;
 import com.spring.techie.sumanth.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
