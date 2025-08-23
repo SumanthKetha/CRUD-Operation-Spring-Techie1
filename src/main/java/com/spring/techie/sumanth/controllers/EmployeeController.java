@@ -27,7 +27,8 @@ public class EmployeeController {
 
     @PutMapping("/update")
     public String updateEmployee(@RequestBody  Employee employee) {
-        return employeeService.updateEmployee(employee);
+         employeeService.updateEmployee(employee);
+         return "Updated Successfully";
     }
 
     @DeleteMapping("/delete/id/{id}")
@@ -37,4 +38,10 @@ public class EmployeeController {
 
     @PostMapping("/delete/employee")
     public String deleteEmployee(@RequestBody Employee employee){return employeeService.deleteEmployee(employee);}
+
+    @GetMapping("clear/cache")
+    public String clearCache(@RequestParam String cacheName) {
+        employeeService.removeCache(cacheName);
+        return cacheName + "removed successfully";
+    }
 }

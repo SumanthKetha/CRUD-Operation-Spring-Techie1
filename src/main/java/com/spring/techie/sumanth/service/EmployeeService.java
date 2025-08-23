@@ -9,9 +9,16 @@ public interface EmployeeService {
 
     Employee getEmployeeById(Integer id);
 
-    String updateEmployee(Employee employee);
+    Employee updateEmployee(Employee employee);
 
     String deleteEmployeeById(Integer id);
 
     String deleteEmployee(Employee employee);
+
+    void removeCache(String name);
+    // TO-DO
+    // implement these methods using cache manager.
+    Employee storeInCache(Integer id);
+    Employee updateCache(Employee employee);
+    String deleteCache(Integer id);
 }
