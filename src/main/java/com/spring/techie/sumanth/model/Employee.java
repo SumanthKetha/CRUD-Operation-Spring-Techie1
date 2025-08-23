@@ -1,7 +1,11 @@
 package com.spring.techie.sumanth.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.io.Serializable;
 
 @Data
 @Entity
@@ -9,7 +13,8 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 @Table(name = "emp_details")
-public class Employee {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class Employee implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +23,6 @@ public class Employee {
     private String name;
     @Setter
     @Getter
-    private double salary;
+    private Double salary;
 
 }
